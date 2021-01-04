@@ -1,3 +1,1 @@
-INSERT INTO image_metadata (title, description, width, height, created, uri, user_id) VALUES ('Our fist imageeee', 'This is the first image that we created for the RSO course.', 1280, 1325, TIMESTAMP '2006-01-01 15:36:38', 'https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/tess_first_light-tb.jpg',2);
-
-INSERT INTO image_metadata (title, description, width, height, created, uri, user_id) VALUES ('trojka', 'This is the first image that we created for the RSO course.', 1280, 1325, TIMESTAMP '2006-01-01 15:36:38', 'https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/tess_first_light-tb.jpg',3);
+INSERT INTO komentar_metadata(vsebina, image_id) VALUES ('to je moj komentar viwviwiueee',1);
