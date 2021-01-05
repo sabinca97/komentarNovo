@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: koemntar-deployment
+  name: komentar-deployment
 spec:
   replicas: 1
   selector:
@@ -48,7 +48,7 @@ kind: Service
 metadata:
   name: komentar-service
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
   - port: 8080
     protocol: TCP
