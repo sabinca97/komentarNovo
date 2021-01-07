@@ -39,11 +39,25 @@ public class KomentarMetadataBean {
 
     public List<KomentarMetadata> getKomentarMetadataFilter(UriInfo uriInfo) {
 
-        QueryParameters queryParameters = QueryParameters.query(uriInfo.getRequestUri().getQuery()).defaultOffset(0)
-                                                         .build();
+        int count = 0;
+        int maxTries = 5;
+        while(true) {
+            try {
+                QueryParameters queryParameters = QueryParameters.query(uriInfo.getRequestUri().getQuery()).defaultOffset(0)
+                        .build();
 
-        return JPAUtils.queryEntities(em, KomentarMetadataEntity.class, queryParameters).stream()
-                       .map(KomentarMetadataConverter::toDto).collect(Collectors.toList());
+                return JPAUtils.queryEntities(em, KomentarMetadataEntity.class, queryParameters).stream()
+                        .map(KomentarMetadataConverter::toDto).collect(Collectors.toList());
+            } catch (Exception e) {
+                // handle exception
+                if (++count == maxTries) throw e;
+            }
+
+        }
+
+
+
+
     }
 
     @Timed(name = "timer koliko casa rabi za pridobit slike")
