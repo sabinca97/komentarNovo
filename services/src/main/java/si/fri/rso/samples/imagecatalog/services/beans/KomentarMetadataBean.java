@@ -55,9 +55,6 @@ public class KomentarMetadataBean {
 
         }
 
-
-
-
     }
 
     @Timed(name = "timer koliko casa rabi za pridobit slike")

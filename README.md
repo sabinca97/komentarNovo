@@ -26,7 +26,7 @@ Status Travic CI-ja :https://travis-ci.com/github/sabinca97/mojRepozitorij
 ### Kubernetes
 - Microsoft Azur "mojRso"
 - splošni ukazi
-   - kreiranje  ```kubectl create -f image-catalog-deployment.yaml```
+   - kreiranje  ```kubectl create -f komentar-deployment.yaml```
    - posodabljanje ```kubectl apply -f image-catalog-deployment.yaml```
    - tukaj je zapisan external ip za dostop ```kubectl get services```
    - pridobim pode ```kubectl get pods```
